@@ -1,0 +1,1308 @@
+@font-face {
+    font-family: cooper;
+    src: url(./Fonts/CooperLtBTWXXLight.ttf);
+}
+/* ---------------------------------------------- */
+
+/* CSS Boiler Plate */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+/* -------------------------------------------------------- */
+
+/* Main Part */
+#main{
+    position: relative;
+    overflow-x: hidden;
+}
+/* ----------------------------------------------------- */
+
+/* Nav Bar */
+#navbar{
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background-color: whitesmoke;
+    display:inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    /* margin-left: -5px; */
+    font-family: cooper;
+    z-index: 999;
+}
+#navbar #head h2{
+    font-size: 2.1vw;
+    font-weight: 300;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+#navbar #head h2 span{
+    color: #00EB8F;
+}
+
+#navbar #head>h2:hover{
+    scale: 0.9;
+    opacity: 0.8;
+}
+
+#navbar #nav{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#navbar #nav>i{
+    display: none;
+}
+#navbar #nav a{
+    font-size: 1.1vw;
+    color: black;
+    text-decoration: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+#navbar #nav a:hover{
+    border-bottom: 3px solid #80F5C7;
+}
+#navbar #nav a:nth-last-child(1){
+    border: 1px solid gray;
+    padding: 3px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+#navbar #nav a:nth-last-child(1) #close{
+    z-index: -10;
+    position: absolute;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: #00EB8F;
+    transition: 1s ease;
+}
+#navbar #nav a:nth-last-child(1):hover #close{
+    left: 0;
+}
+
+#navbar #nav a img{
+    height: 5vh;
+    transform: rotate(90deg);
+    width: 2vw;
+    margin-left: 10px;
+}
+#navdata{
+    width: 100vw;
+    height: 40vh;
+    background-color:white;
+    position: fixed;
+    z-index: 900;
+    display:none;
+    justify-content: center;
+    transition: 1s ease;
+}
+#navbar #nav #one:active #navdata{
+    display: flex;
+}
+#navdata #box{
+    width: 80%;
+    height: 90%;
+    /* background-color:yellow; */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+#navdata .samepro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: cooper;
+    font-size: 1vw;    
+}
+#navdata #box #box1{
+    width: 33%;
+    height: 100%;
+    /* background-color: royalblue; */
+}
+#navdata #box #box2{
+    width: 33%;
+    height: 100%;
+    /* background-color: violet; */
+}
+#navdata #box #box3{
+    width: 33%;
+    height: 100%;
+    /* background-color:coral; */
+}
+#navdata #box h2:hover{
+    border-bottom: 3px solid #00EB8F;
+}
+
+#menudata{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+#menudata #box{
+    width: 200px;
+    height: 300px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#menudata #box a{
+    font-family: cooper;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+#menudata #box a:hover{
+    border-bottom: 3px solid #00EB8F;
+}
+#menudata #box a:nth-last-child(1){
+    border: 1px solid gray;
+    padding: 3px 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 12px;
+}
+#menudata #box a:nth-last-child(1) #close{
+    z-index: -10;
+    position: absolute;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: #00EB8F;
+    transition: 1s ease;
+}
+#menudata #box a:nth-last-child(1):hover #close{
+    left: 0;
+}
+
+#menudata #box a img{
+    height: 3vh;
+    transform: rotate(90deg);
+    width: 5vw;
+    margin-left: 5px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+/* page 1 */
+#page1{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: lightgreen; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page1 #text{
+    width: 900px;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 40px;
+    /* position: relative; */
+}
+#page1 h1{
+    font-size: 5.1vw;
+    font-family: cooper;
+    font-weight: 100;
+    z-index: 99;
+    position: relative;
+
+}
+#page1 h1::after{
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 25px;
+    /* background-color: red; */
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+#page1 #text h3{
+    font-size: 1.6vw;
+    font-weight: 600;
+    font-family: gilroy;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+#page1 #text h3 #intext{
+    /* position: absolute; */
+    width: 80px;
+    height: 35px;
+    /* background-color: red; */
+    border: 1px solid rgb(78, 76, 76);
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page1 #text h3 #intext img{
+    transform: rotate(90deg);
+    
+}
+#page1 #text h3 #intext button{
+    width: 100%;
+    height: 100%;
+    background-color: #00EB8F;
+    border-color: transparent;
+    position: absolute;
+    left: -100%;
+    transition: 1s ease;
+    z-index: -10;
+}
+#page1 #text h3 #intext:hover button{
+    left: 0;
+}
+
+
+
+img{
+    border-radius: 30px;
+}
+#page1 #img1{
+    /* width: 100px; */
+    height: 500px;
+    position: absolute;
+    top: 15vh;
+    left: 10vw;  
+}
+
+#page1 #img2{
+    /* width: 100px; */
+    height: 220px;
+    position: absolute;
+    right: 24vw;
+    top: 12vh;
+    
+}
+#page1 #img3{
+    /* width: 100px; */
+    height: 280px;
+    position: absolute;
+    right: 8vw;
+    bottom: 18vh;
+}
+
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* Page 2 */
+#page2{
+    width: 100vw;
+    height: 70vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: cooper;
+    color: whitesmoke;
+}
+#page2 #p2text{
+    width: 70vw;
+    margin: 50px;
+}
+#page2 h4{
+    font-size: 1.2vw;
+    margin-bottom: 30px;
+}
+#page2 h4 button{
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid black; */
+    background-color: #00EB8F;
+    border-radius: 50%;
+}
+#page2 h1{
+    font-weight: 100;
+    font-size: 3vw;
+    margin-bottom: 30px;
+    position: relative;
+}
+#page2 h1::after{
+    content: "";
+    position: absolute;
+    width: 215px;
+    height: 80px;
+    /* background-color: red; */
+    /* bottom: -15px; */
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%,0);
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+#page2 #p2text h3{
+    font-size: 1.6vw;
+    font-weight: 600;
+    font-family: gilroy;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    /* margin-top: 50px; */
+}
+#page2 #p2text h3 #close{
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    /* background-color: red; */
+    border: 1px solid white;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 #p2text h3 #close img{
+    transform: rotate(90deg);
+    z-index: 99;
+    filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%);
+    
+}
+#page2 #p2text h3 #close button{
+    width: 130%;
+    height: 120%;
+    background-color: #00EB8F;
+    border-color: transparent;
+    position: absolute;
+    left: -130%;
+    transition: 1s ease;
+    /* z-index: -10; */
+}
+#page2 #p2text h3 #close:hover button{
+    left: -10%;
+}
+
+
+/* ------------------------------------------------------------------------------------ */
+
+/* Page 3 */
+#page3{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #80F5C7; */
+    display: flex;
+}
+#p3left{
+    width: 50vw;
+    height: 100vh;
+    /* background-color: white; */
+    position: relative;
+}
+#p3left #img1{
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#p3left #img2{
+    height: 27vh;
+    width: 11vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#p3left #img3{
+    height: 35vh;
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    right: 15%;
+}
+#p3left #img4{
+    height: 61vh;
+    width: 37.5vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+#p3right{
+    width: 50vw;
+    height: 100vh;
+    /* background-color:lightblue; */
+    position: relative;
+}
+#p3right #p3text{
+    width: 600px;
+    height: 500px;
+    /* background-color: gray; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 0;
+
+    
+}
+#p3right #p3text h1{
+    font-family: cooper;
+    font-size: 4vw;
+    font-weight: 100;
+    margin: 20px 0;
+    position: relative;
+}
+#page3 #p3text h1::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 18px;
+    /* background-color: red; */
+    top: 45%;
+    left: 42%;
+    transform: translate(-50%,0);
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+#p3right #p3text p{
+    font-size: 1.1vw;
+    line-height: 1.7vw;
+    margin: 30px 0;
+    font-weight: 100;
+}
+#p3right #p3text #p3div{
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#p3right #p3text #p3div #photo{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    background-image: url(./image/profile.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+#p3right #p3text #p3div h2{
+    font-size: 1.3vw;
+    font-family: gilroy;
+}
+#p3right #p3text #p3div #btn{
+    width: 180px;
+    height: 40px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+#p3right #p3text #p3div #btn img{
+    transform: rotate(90deg);
+    width: 30px;
+}
+#p3right #p3text #p3div #btn button{
+    width: 100%;
+    height: 100%;
+    background-color:#00EB8F;
+    border-color: transparent;
+    position: absolute;
+    left: -100%;
+    transition: .8s ease;
+    z-index: -1;
+}
+#p3right #p3text #p3div #btn:hover button{
+    left: 0;
+}
+
+
+
+/* ---------------------------------------------------------------------------- */
+
+/* Page 4 */
+#page4{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #b7f580; */
+}
+#page4 #p4top{
+    width: 100vw;
+    height: 30vh;
+    /* background-color: red; */
+    text-align: center;
+}
+#p4top h1{
+    font-size: 3.5vw;
+    padding-top: 50px;
+    font-family: cooper;
+    font-weight: 300;
+    position: relative;
+}
+#page4 #p4top h1::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    /* background-color: red; */
+    /* bottom: -15px; */
+    top: 24%;
+    left: 37.5%;
+    transform: translate(-50%,0);
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page4 #p4bottom{
+    width: 100vw;
+    height: 70vh;
+    /* background-color:lightcoral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page4 #p4bottom #box{
+    width: 80%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: inline-flex;
+    /* gap: 2px; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#p4bottom #box .brandimg{
+    width:20%;
+    height: 20%;
+    /* background-color: yellowgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#p4bottom #box .brandimg img{
+    width: 60%;
+    /* height: 60%; */
+    object-fit: 50%;
+    object-position: center;
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/* Page 5 */
+
+#page5{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #f5eb80; */
+    position: relative;
+}
+
+#page5 #box{
+    width: 85%;
+    height: 80%;
+    /* background-color: #00EB8F; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#page5 #box #photo{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+    font-family: cooper;
+}
+#page5 #box #photo #img1{
+    width: 48%;
+    height: 100%;
+    /* background-color: rgb(0, 255, 234); */
+    overflow: hidden;
+    position: relative;
+}
+#page5 #box #photo #img2{
+    width: 48%;
+    height: 100%;
+    /* background-color: rgb(255, 132, 0); */
+    overflow: hidden;
+    position: relative;
+}
+#page5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s ease;
+    filter:brightness(60%)contrast(101%);
+}
+#page5 img:hover{
+    scale: 1.2;
+}
+#page5 #img1 span{
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    /* transform: translate(-50%,-50%); */
+}
+#page5 #img1 span img{
+    width: 35%;
+    /* height: 100%; */
+    object-fit: cover;
+    object-position: center;
+}
+#page5 #img2 span{
+    position: absolute;
+    top: 7%;
+    left: 8%;
+    /* transform: translate(-50%,-50%); */
+}
+#page5 #img2 span img{
+    width: 35%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+#page5 #box #img1 h1{
+    font-size: 2.5vw;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    padding: 0 0 0 30px;
+    font-weight: 100;
+}
+#page5 #box #img1 h3{
+    padding: 20px 0 0 30px;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 5%;
+}
+#page5 #box #img1 h3 #close{
+    width: 80px;
+    height: 40px;
+    /* background-color: blue; */
+    border-radius: 50px;
+    border: 1px solid white;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+#page5 #box #img1 h3 #close img{
+    height: 6vh;
+    transform: rotate(90deg);
+    width: 2vw;
+    margin-left: 20px;
+    margin-top: -5px;
+    filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%);
+    
+}
+#page5 #box #img1 h3 #close button{
+    width: 100%;
+    height: 110%;
+    background-color:#00EB8F;
+    border: transparent;
+    position: absolute;
+    left: -100%;
+    transition: .5s ease;
+    z-index: -1;
+}
+#page5 #box #photo #img1:hover button{
+    left: 0%;
+}
+#page5 #box #img2 h1{
+    font-size: 2.8vw;
+    width: 80%;
+    position: absolute;
+    top: 60%;
+    padding: 0 0 0 30px;
+    font-weight: 100;
+}
+#page5 #box #img2 h3{
+    padding: 20px 0 0 30px;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 5%;
+}
+#page5 #box #img2 h3 #close{
+    width: 80px;
+    height: 40px;
+    /* background-color: blue; */
+    border-radius: 50px;
+    border: 1px solid white;
+    overflow: hidden;
+    position: relative;
+    z-index: 90;
+}
+#page5 #box #img2 h3 #close img{
+    height: 6vh;
+    transform: rotate(90deg);
+    width: 2vw;
+    margin-left: 20px;
+    margin-top: -5px;
+    filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%);
+    
+}
+#page5 #box #img2 h3 #close button{
+    width: 100%;
+    height: 110%;
+    background-color:#00EB8F;
+    border: transparent;
+    position: absolute;
+    left: -100%;
+    transition: 1s ease;
+    z-index: -1;
+}
+#page5 #box #photo #img2:hover button{
+    left: 0%;
+}
+
+
+#page5 #box #downpart{
+    width: 100%;
+    height: 20%;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page5 #box #downpart #data{
+    width: 500px;
+    height: 70px;
+    /* background-color: #00EB8F; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: gilroy;
+}
+#page5 #box #downpart #data #pic{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#page5 #box #downpart #data #pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#page5 #box #downpart #data h2{
+    font-size: 2vw;
+    font-weight: 100;
+}
+#page5 #box #downpart #data #close{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    /* background-color: red; */
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    font-size: 1.3vw;
+}
+
+#page5 #box #downpart #data #close img{
+    height: 4vh;
+    transform: rotate(90deg);
+    width: 2vw;
+    margin-left: -15px;
+    /* margin-top: -5px; */
+    /* filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%); */
+}
+#page5 #downpart #data #close button{
+    width: 100%;
+    height: 110%;
+    background-color:#00EB8F;
+    border: transparent;
+    position: absolute;
+    left: -100%;
+    transition: 1s ease;
+    z-index: -1;
+}
+#page5 #downpart #data #close:hover button{
+    left: 0;
+}
+
+
+
+
+/* ---------------------------------------------------------------------- */
+
+
+
+/* Page 6 */
+
+#page6{
+    width: 100vw;
+    height: 110vh;
+    background-color: white;
+  }
+
+  .swiper {
+    width: 65%;
+    height: 70%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: red; */
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #page6 .swiper-slide #box{
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px 0;
+  }
+  #page6 .swiper-slide #box #logopic{
+      width: 140px;
+      height: 140px;
+      background-color: greenyellow;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+   #page6 .swiper-slide #box #logopic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+   }
+  
+
+  #page6 .swiper-slide #box h1{
+    font-family: cooper;
+    font-size: 4vw;
+    font-weight: 100;
+  }
+  #page6 .swiper-slide #box #about{
+    width: 250px;
+    height: 80px;
+    /* background-color: red; */
+    font-family: gilroy;
+    text-align: center;
+    padding-top: 20px;
+  }
+  #page6 .swiper-slide #box #about h3{
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  #page6 .swiper-slide #box #about h3 span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #00EB8F;
+    display: inline-block;
+  }
+  #page6 .swiper-slide #box #about p{
+    color:gray;
+
+  }
+  
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------- */
+
+
+
+/* Page 7 */
+
+#page7{
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    position: relative;
+
+    
+}
+#page7 #box{
+    width: 80%;
+    height: 120%;
+    /* background-color: red; */
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#page7  #top{
+    width: 80%;
+    height: 50%;
+    background-color: rgb(255, 0, 251);  
+    position: relative;
+}
+#page7 #top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter:brightness(60%)contrast(101%);
+}
+#page7 #top #text{
+    width: 850px;
+    height: 200px;
+    /* background-color: red; */
+    /* border: 3px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+#page7 #top #text h1{
+    color: rgb(247, 243, 243);
+    font-family: cooper;
+    font-weight: 500;
+    position: relative;
+}
+#page7 #top #text h1::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    /* background-color: red; */
+    top: 35px;
+    left: 175px;
+    /* transform: translate(-50%,0); */
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+#page7 #top #text #about{
+    width: 450px;
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#page7 #top #text #about #pic{
+    width: 50px;
+    height: 50px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+#page7 #top #text #about #pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter:brightness(100%)contrast(101%);
+}
+
+
+#page7 #top #text #about span{
+    font-size: 1.6vw;
+    font-family: gilroy;
+    color: white;
+}
+#page7 #top #text #about #close{
+    width: 200px;
+    height: 45px;
+    /* background-color: green; */
+    border: 1.5px solid white;
+    border-radius: 50px;
+    font-size: 1.2vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    color: white;
+}
+#page7 #top #text #about #close img{
+    height: 4vh;
+    transform: rotate(90deg);
+    width: 2vw;
+    filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%);
+
+}
+#page7 #top #text #about #close button{
+    width: 100%;
+    height: 100%;
+    background-color: #00EB8F;
+    border-color: transparent;
+    position: absolute;
+    left: -100%;
+    transition: 1s ease;
+    z-index: -10;
+}
+#page7 #top #text #about #close:hover button{
+    left: 0;
+}
+
+
+#page7  #middle{
+    width: 100%;
+    height: 55%;
+    /* background-color: rgb(0, 255, 251); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#page7 #middle #left{
+    width: 25%;
+    height: 70%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 0 0 5px;
+}
+#page7 #middle #left h1{
+    font-family: cooper;
+    font-size: 3vw;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+#page7 #middle #left h1::after{
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 70px;
+    /* background-color: red; */
+    /* bottom: -15px; */
+    top: 43%;
+    left: 23%;
+    transform: translate(-50%,0);
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    background-size: cover;
+    background-position: center;
+}
+#page7 #middle #left a{
+    font-family: gilroy;
+    font-size: 1.8vw;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#page7 #middle #left a div{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1.5px solid white;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page7 #middle #left a div img{
+    transform: rotate(90deg);
+    filter: invert(100%) sepia(100%)saturate(0%)hue-rotate(154deg)brightness(107%)contrast(101%);
+}
+#page7 #middle #left a div button{
+    width: 100%;
+    height: 100%;
+    background-color:#00EB8F;
+    border-color: transparent;
+    position: absolute;
+    left: -100%;
+    transition: 1s ease;
+    z-index: -1;
+}
+#page7 #middle #left a div:hover button{
+    left: 0;
+}
+
+#page7 #middle #right{
+    width: 70%;
+    height: 70%;
+    /* background-color:orange; */
+    display: flex;
+}
+#page7 #middle #right .rbox{
+    width: 25%;
+    height: 100%;
+    /* background-color: greenyellow; */
+    border: 1px solid black;
+    font-family: gilroy;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#page7 #middle #right .rbox h3{
+    color: white;
+    font-size: 1.8vw;
+}
+#page7 #middle #right .rbox h4{
+    color: rgb(248, 245, 245);
+    font-size: 1.2vw;
+}
+#page7 #middle #right #r4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#page7 #middle #right .rbox h4:hover{
+    text-decoration-line:underline ;
+    text-decoration-color: #00EB8F;
+}
+
+#page7 #middle #right #r4 img{
+    width: 120px;
+    
+}
+
+
+#page7  #bottom{
+    width: 100%;
+    height: 15%;
+    /* background-color: rgb(217, 255, 0); */
+    border-top: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page7 #bottom #left{
+    width: 200px;
+    height: 40px;
+    /* background-color: red; */
+}
+#page7 #bottom #left h1{
+    font-family: cooper;
+    font-weight: 100;
+    font-size:1.7vw;
+    color: white;
+}
+#page7 #bottom #left h1 span{
+    color: #00EB8F;
+    font-size:2.5vw;
+}
+
+#page7 #bottom #right{
+    width: 830px;
+    height: 40px;
+    /* background-color: red; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+#page7 #bottom #right a{
+    color: white;
+    text-decoration: none;
+    font-size: 1vw;
+    cursor: pointer;
+}
+#page7 #bottom #right a span{
+    border-bottom: 1px solid white;
+}
+#page7 #bottom #right a span:hover{
+    border-bottom: 1px solid #00EB8F;
+}
+#page7 #bottom #right i:hover{
+    color: #00EB8F;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------- */
